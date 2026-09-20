@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <!-- LOGIN -->
+    <section id="loginView">
+      <h1>Welcome back</h1>
+      <p class="subtitle">Sign in to your account</p>
+
+      <form id="loginForm" novalidate>
+        <label for="email">Email</label>
+        <input type="email" id="email" autocomplete="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="current-password" required>
+
+        <button type="submit">Sign in</button>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="switch">No account yet? <a href="#" id="showRegister">Create one</a></p>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="registerView" class="hidden">
+      <h1>Create account</h1>
+      <p class="subtitle">It only takes a moment</p>
+
+      <form id="registerForm" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" autocomplete="name" required>
+
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" autocomplete="email" required>
+
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" autocomplete="new-password" minlength="6" required>
+        <small class="hint">At least 6 characters</small>
+
+        <button type="submit">Create account</button>
+        <p id="registerMessage" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="switch">Already registered? <a href="#" id="showLogin">Sign in</a></p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
